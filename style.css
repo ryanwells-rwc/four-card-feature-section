@@ -1,0 +1,209 @@
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./fonts/poppins-v24-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/poppins-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/poppins-v24-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+.text-preset-1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+.mobile-text-preset-1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+}
+
+.text-preset-2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 200;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.mobile-text-preset-2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.text-preset-3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.text-preset-4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.text-preset-5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+body {
+  color: hsl(234, 12%, 34%);
+}
+
+header {
+  text-align: center;
+  padding-left: 1.8125rem;
+  padding-right: 1.875rem;
+  padding-top: 3.5rem;
+}
+header h1 {
+  margin-bottom: 1rem;
+}
+header h1 span {
+  display: block;
+}
+header p {
+  margin-bottom: 3.75rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding-left: 1.8125rem;
+  padding-right: 1.875rem;
+  padding-bottom: 2rem;
+}
+main article {
+  box-shadow: -5px 0 10px -5px rgba(106, 113, 120, 0.2), 5px 0 10px -5px rgba(106, 113, 120, 0.2), 0 10px 15px 2px rgba(106, 113, 120, 0.3); /* Bottom shadow */
+  padding: 2rem 2rem 2.9375rem 2rem;
+  border-radius: 0.5rem;
+}
+main article.cyan-top-border {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+main article.red-top-border {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+main article.orange-top-border {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+main article.blue-top-border {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+main article p {
+  color: hsl(212, 6%, 44%);
+}
+main article img {
+  margin-top: 2rem;
+  float: right;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-top: 5rem;
+    padding-left: 7.125rem;
+    padding-right: 7.125rem;
+  }
+  header .mobile-text-preset-1, header .mobile-text-preset-2 {
+    font-size: 2.25rem;
+  }
+  header p {
+    margin-bottom: 4.625rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". item1 item1 ." "item2 item2 item3 item3" ". item4 item4 .";
+    margin-bottom: 5rem;
+    padding-left: 3.375rem;
+    padding-right: 3.375rem;
+  }
+  main .red-top-border {
+    grid-area: item1;
+  }
+  main .cyan-top-border {
+    grid-area: item2;
+  }
+  main .orange-top-border {
+    grid-area: item3;
+  }
+  main .blue-top-border {
+    grid-area: item4;
+  }
+}
+@media (min-width: 1440px) {
+  header {
+    padding-top: 6.375rem;
+  }
+  header p {
+    width: 540px;
+    margin: 0 auto 4.625rem;
+  }
+  main {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: auto;
+    grid-template-areas: ". item2 ." "item1 item2 item4" "item1 item3 item4" ". item3 .";
+    gap: 2rem;
+    margin-bottom: 10.1875rem;
+  }
+  main article {
+    width: 350px;
+  }
+  main .cyan-top-border {
+    grid-area: item1;
+  }
+  main .red-top-border {
+    grid-area: item2;
+  }
+  main .orange-top-border {
+    grid-area: item3;
+  }
+  main .blue-top-border {
+    grid-area: item4;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
